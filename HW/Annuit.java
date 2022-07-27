@@ -11,7 +11,16 @@ public class Annuit {
 		float p = scan.nextFloat();
 		System.out.print("Количество месяцев :");
 		int m = scan.nextInt();
-		double a = k*(p/(1+p)-m-1);
+		float x ;
+		x = p % 100;
+		double a = k*(x/(1+x)-m-1);
 		System.out.println("Ваш ответ : " + a);
+
+		// int a = 50;
+		// double b = 7;
+		// double c;
+		// c = a * b / 100; 
+		
+		// System.out.println(c);
 	}
 }
