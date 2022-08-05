@@ -2,42 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ee6784e-209c-4e31-87fb-742100db86ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/HomeWork.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/out/production/HomeWork/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HW L8/HomeWork/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l2/Laptop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l2/Laptop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Bus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Bus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Landau.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Landau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Laptop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Laptop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Salary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Salary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l3/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l7/Date.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l7/Date.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l8/save.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l8/season" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l8/season.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../l8/season.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Clock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson_9/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson_9/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -56,10 +36,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/GitHub/MegaCom/lesson_9"
+    "last_opened_file_path": "D:/GitHub/MegaCom/lesson_9",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Clock">
+    <configuration name="Clock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Clock" />
+      <module name="lesson_9" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lesson_9" />
@@ -69,6 +57,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Clock" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
