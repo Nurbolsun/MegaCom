@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -18,15 +19,18 @@ public class Main {
         }
         byte ages[] = new byte[students];
 
+        int sum = 0;
         for (int i = 0; i < ages.length; i++) {
             System.out.println("Возрасть " + names[i] + ": " );
             byte age = scan.nextByte();
             ages[i] = age;
+            sum += ages[i];
         }
             for (int i = 0; i < names.length; i++) {
 
                 System.out.println("Имя : " + names[i] + ages[i]);
 
         }
+        System.out.println("Средний возраст: " + sum / students);
     }
 }
