@@ -1,19 +1,19 @@
 package enitity;
 
-import enums.Weekend;
+import enums.Elements;
 
 public class Day {
-    private Weekend weekend;
+    private Elements weekend;
 
-    public Weekend getWeekend() {
+    public Elements getWeekend() {
         return weekend;
     }
 
-    public void setWeekend(Weekend weekend) {
+    public void setWeekend(Elements weekend) {
         this.weekend = weekend;
     }
 
-    public Day(Weekend weekend) {
+    public Day(Elements weekend) {
         this.weekend = weekend;
     }
 }

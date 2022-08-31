@@ -1,6 +1,6 @@
 public class Guitar {
     String color;
-    int Stringcount ;
+    int Stringcount;
     int[] tensions = new int[6];
 
     public String getColor() {
@@ -20,7 +20,7 @@ public class Guitar {
     }
 
     void tune(){
-        tensions[0-5] = 5;
+        tensions[5] = 5;
     }
     void play(){
         System.out.println("Oh, the misery\n" +

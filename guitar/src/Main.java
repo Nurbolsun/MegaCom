@@ -5,5 +5,6 @@ public class Main {
         guitar.color = "red";
         guitar.Stringcount = 6;
         guitar.tune();
+        guitar.play();
     }
 }
