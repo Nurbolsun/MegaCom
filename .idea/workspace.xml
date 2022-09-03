@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d8e7aa7-7b23-4f66-88a5-dd0c86858153" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/shop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop/src/shop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeWork.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enum/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enum/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enum/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/enum/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enum/out/production/enum/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/enum/out/production/enum/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enum/out/production/enum/enitity/Day.class" beforeDir="false" afterPath="$PROJECT_DIR$/enum/out/production/enum/enitity/Day.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enum/out/production/enum/enums/Elements.class" beforeDir="false" afterPath="$PROJECT_DIR$/enum/out/production/enum/enums/Elements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nasled/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/enum" />
   </component>
   <component name="RunAnythingContextRecentDirectoryCache">
     <option name="paths">
