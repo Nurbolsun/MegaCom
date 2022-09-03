@@ -9,4 +9,5 @@ public class Operationlmpl {
 
     Sugar sugar = new Sugar("Sugar", 124, Measure.Kg, ProductCategory.SUGAR );
     Sugar sugar2 = new Sugar("Sugar2", 124, Measure.Pc, ProductCategory.SUGAR );
+    Sugar sugar3 = new Sugar("Sugar2", 124, Measure.Pc, ProductCategory.SUGAR );
 }
