@@ -42,6 +42,18 @@ public abstract class Product {
         this.productCategory = productCategory;
     }
 
+    public void getInfo(){
+        System.out.println(this.getName());
+        System.out.println(this.getCost());
+    };
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public Product(String name, double cost, Measure measure, ProductCategory productCategory) {
         this.name = name;
         this.cost = cost;
