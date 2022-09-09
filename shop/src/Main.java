@@ -14,7 +14,7 @@ public class Main {
         Operation operation = new Operationlmpl();
 
         System.out.println("Добро пожаловать");
-
+        System.out.println("");
         System.out.println("Выберите категорию продукта: ");
 
         operation.getCategory();

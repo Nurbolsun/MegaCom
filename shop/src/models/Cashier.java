@@ -37,4 +37,11 @@ public class Cashier {
     public void setId(long id) {
         this.id = id;
     }
+
+    public Cashier(String name, String login, byte age, long id) {
+        this.name = name;
+        this.login = login;
+        this.age = age;
+        this.id = id;
+    }
 }
