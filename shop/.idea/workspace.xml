@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f25268-8e4e-4dab-bec2-18fe923b750b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/ReceiptDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/models/Cashier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/models/Cashier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/models/Details.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/models/Details.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/models/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/models/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/models/Receipt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/models/Receipt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/service/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/service/Operation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/shop/service/impl/Operationlmpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/service/impl/Operationlmpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Receipt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/impl/Operationlmpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/Operationlmpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,16 +22,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="PC" />
+        <entry key="$PROJECT_DIR$/.." value="Laptop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EFpPQVUScvBTQVxstwFHlXULE8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../shop_mega" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -49,6 +70,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
