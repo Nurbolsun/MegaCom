@@ -10,7 +10,8 @@ public interface Operation {
     Receipt getReceipt(Order order);
 
     void getCategory();
-    Cashier getCashierByName(String cashier);
+    void getName();
+    Cashier getCashierByName(String cashier) throws Exception;
     Product[] getProductByCategory(String category);
     Product getProductByName(String productName);
 }

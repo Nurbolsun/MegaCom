@@ -61,13 +61,25 @@ public class Operationlmpl implements Operation {
         }
     }
 
+    @Override
+    public void getName() {
+        for (Cashier iteam: cashiers){
+            System.out.println(iteam.getName());
+        }
+    }
+
 
     @Override
     public Product[] getProductByCategory(String category) {
         Product[] result = new Product[10];
         for (int i = 0; i < products.length; i++) {
-            if (products[i].getProductCategory().equals(ProductCategory.valueOf(category))) {
-                result[i] = products[i];
+            try {
+                if (products[i].getProductCategory().equals(ProductCategory.valueOf(category))) {
+                    result[i] = products[i];
+            }
+
+            }catch (IllegalArgumentException e){
+                throw new IllegalArgumentException("Неверно введена категория продукта");
             }
         }
         return result;
@@ -83,11 +95,11 @@ public class Operationlmpl implements Operation {
         return null;
     }
     @Override
-    public Cashier getCashierByName(String cashier) {
-        for (Cashier iteam:cashiers){
-            if (iteam.getName().equals(cashier))
-                return iteam;
+    public Cashier getCashierByName(String cashier) throws Exception {
+            for (Cashier iteam : cashiers) {
+                if (iteam.getName().equals(cashier))
+                    return iteam;
+            }
+            return null;
         }
-        return null;
-    }
 }
