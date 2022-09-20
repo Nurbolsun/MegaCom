@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f25268-8e4e-4dab-bec2-18fe923b750b" name="Changes" comment="add from PC">
-      <change afterPath="$PROJECT_DIR$/../exceptions/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/exceptions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/src/com/company/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/src/com/company/models/Tea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/src/com/company/service/impl/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exceptions/src/com/company/service/impl/OperationImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled104.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../exceptions/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shop/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shop/service/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/service/Operation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/shop/service/impl/Operationlmpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/shop/service/impl/Operationlmpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/impl/Operationlmpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/impl/Operationlmpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
