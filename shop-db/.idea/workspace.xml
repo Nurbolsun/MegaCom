@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27f25268-8e4e-4dab-bec2-18fe923b750b" name="Changes" comment="add from PC">
+    <list default="true" id="6560363f-92c9-4991-8ce6-0cbe7d3c553b" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../calendar/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../calendar/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../calendar/.idea/modules.xml" afterDir="false" />
@@ -29,38 +29,43 @@
       <change afterPath="$PROJECT_DIR$/../collections/src/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../collections/src/Operation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../collections/src/OperationImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../deque/deque.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/enums/OperationStatus.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/exeptions/ClientNotFoundExeptions.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/models/Client.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/models/Operation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/models/Product.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/services/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/services/OperationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/services/ProductService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/services/impl/ClientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/services/impl/OperationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lombard/src/com/company/services/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres/src/com/company/db/DBHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres/src/com/company/db/impl/DBHelperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../postgres/src/com/company/models/Teachers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../date/out/production/date/Exem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../date/out/production/date/Exem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../date/out/production/date/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../date/out/production/date/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../date/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../date/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shop/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="PC" />
-      </map>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
     </option>
+  </component>
+  <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2EFpPQVUScvBTQVxstwFHlXULE8" />
+  <component name="ProjectId" id="2GkcJYQ4SgzpSPAEnWDJmxboiIp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -69,17 +74,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../date" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../grocery-master" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.services.impl" />
+      <recent name="com.company.services." />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="shop" />
+      <module name="grocery-master" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,31 +99,26 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="27f25268-8e4e-4dab-bec2-18fe923b750b" name="Changes" comment="" />
-      <created>1662201162517</created>
+      <changelist id="6560363f-92c9-4991-8ce6-0cbe7d3c553b" name="Default Changelist" comment="" />
+      <created>1666935950077</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662201162517</updated>
+      <updated>1666935950077</updated>
+      <workItem from="1666935951706" duration="501000" />
+      <workItem from="1666960701530" duration="5102000" />
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
 </project>
