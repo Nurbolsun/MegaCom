@@ -1,0 +1,4 @@
+kg\megacom\models\Oder.class
+kg\megacom\models\User.class
+kg\megacom\dao\DbHelper.class
+kg\megacom\Main.class
