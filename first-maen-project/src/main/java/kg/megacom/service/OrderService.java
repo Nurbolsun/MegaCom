@@ -15,4 +15,7 @@ public interface OrderService {
 
     void save(Order order);
 
+    Order checkSpam(Long userId,Long recipientId);
+
+
 }

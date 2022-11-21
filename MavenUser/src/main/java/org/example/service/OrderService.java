@@ -1,12 +1,18 @@
-package org.example.service;
+package kg.megacom.service;
 
-import org.example.dao.OrderRep;
+import kg.megacom.models.Order;
+import kg.megacom.models.User;
+import kg.megacom.service.impl.OrderServiceImpl;
 
 import java.sql.SQLException;
 
 public interface OrderService {
-    void createTable() throws SQLException;
+    OrderService INSTANCE = new OrderServiceImpl();
 
+    void createTable()throws SQLException;
 
+    Order createOrder(User user);
+
+    void save(Order order);
 
 }

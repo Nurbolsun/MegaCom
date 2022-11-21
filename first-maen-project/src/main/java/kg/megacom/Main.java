@@ -41,48 +41,5 @@ public class Main {
                orderService.createOrder(user);
             }
         }
-
-
-
-/*        User user = new User();
-
-        user.setName(scanner.nextLine());
-        user.setAge(scanner.nextInt());
-        user.setDefinition(scanner.next());
-        user.setEmail(scanner.next());
-        user.setStatus(UserStatus.NEW);
-
-        userService.createUser(user);*/
-/*
-
-        User user1 = new User("Dastan", "Open for relationship", 13, "dastanzholdoshkariev@mail.com", UserStatus.NEW);
-
-        userService.createUser(user1);
-
-        List<User> userList = userService.getAllUsers();
-
-        User user = new User();
-        userList.stream().forEach(x -> System.out.println(x));
-        userList.stream().forEach(x -> {
-            if (x.getId() == 13) {
-                user.setId(x.getId());
-                user.setEmail(x.getEmail());
-                user.setDefinition(x.getDefinition());
-                user.setAge(x.getAge());
-                user.setName(x.getName());
-                user.setStatus(x.getStatus());
-            }
-        });
-
-
-        Order order = new Order();
-        order.setMatch(false);
-        order.setMessage("hello");
-        order.setStatus("New");
-        order.setRecipient_id(user);
-        order.setUser_id(user1);
-
-
-        orderService.createOrder(order);*/
     }
 }

@@ -11,4 +11,6 @@ public interface OrderRep {
     void createTable() throws SQLException;
 
     void save(Order order);
+
+    Order check(Long userId, Long recipient);
 }

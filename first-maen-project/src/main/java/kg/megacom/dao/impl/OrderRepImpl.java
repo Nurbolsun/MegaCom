@@ -3,8 +3,10 @@ package kg.megacom.dao.impl;
 import kg.megacom.dao.DbHelperRep;
 import kg.megacom.dao.OrderRep;
 import kg.megacom.models.Order;
+import kg.megacom.models.User;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -39,6 +41,28 @@ public class OrderRepImpl implements OrderRep {
         } catch (SQLException throwables) {
             System.out.println(throwables.getMessage());
             throwables.printStackTrace();
+        }
+    }
+
+    @Override
+    public Order check(Long userId, Long recipient) {
+        try (PreparedStatement preparedStatement=dbHelperRep.connect().
+                prepareStatement("SELECT * FROM orders o where o.user_id=? and o.recipient_id=?")){
+            preparedStatement.setLong(1,userId);
+            preparedStatement.setLong(2,recipient);
+            ResultSet resultSet=preparedStatement.executeQuery();
+            Order order = new Order();
+            while (resultSet.next()){
+                order.setUserId(new User(resultSet.getLong("user_id")));
+                order.setRecipientId(new User(resultSet.getLong("recipient_id")));
+                order.setStatus(resultSet.getString("status"));
+                order.setMatch(resultSet.getBoolean("match"));
+                order.setMessage(resultSet.getString("message"));
+            }
+            return order;
+        }catch (SQLException throwables) {
+            System.out.println(throwables.getMessage());
+            throw new RuntimeException("");
         }
     }
 }

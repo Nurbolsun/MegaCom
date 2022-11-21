@@ -6,7 +6,7 @@ public class Stream {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("BMW", "Toyota", "Mazda", "Lexus", "Opel", "Audi", "Honda");
 
-        List<String> first = list.stream().filter(n -> n.length()<=5).map(n-> n + "Hi").filter(n -> n.equals("OpelHi")).collect(Collectors.toList());
+        List<String> first = list.stream().filter(n -> n.length()<=3).map(n-> n + "Hi").filter(n -> n.equals("OpelHi")).collect(Collectors.toList());
         first.stream().forEach(System.out::println);
         System.out.println(first);
 

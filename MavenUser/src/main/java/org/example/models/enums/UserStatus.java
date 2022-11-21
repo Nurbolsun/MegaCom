@@ -1,11 +1,13 @@
-package org.example.models.enums;
+package kg.megacom.models.enums;
 
 public enum UserStatus {
     BLOCKED(1),
     INPROGRESS(2),
     NEW(3);
+
     private int value;
-    UserStatus (int value){
-        this.value=value;
+
+    UserStatus(int value) {
+        this.value = value;
     }
 }

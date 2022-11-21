@@ -53,14 +53,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User userAuth() {
-        System.out.println("Введите вашу почту");
-        String usersLogin = scanner.next();
-        User foundUser = findByEmail(usersLogin);
-            while (foundUser.getId() == null) {
+        User foundUser = null;
+        boolean isTrue = true;
+        while (isTrue) {
+            System.out.println("Введите вашу почту");
+            String usersLogin = scanner.next();
+            foundUser = findByEmail(usersLogin);
+            if (foundUser.getId() != null) {
+                break;
+            } else {
                 System.out.println("Пользователь не найдет повторите еще ");
-                userAuth();
             }
-
+        }
         return foundUser;
     }
 
@@ -69,7 +73,7 @@ public class UserServiceImpl implements UserService {
         try {
             User user = userRep.findByEmail(email);
             return user;
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
@@ -78,6 +82,8 @@ public class UserServiceImpl implements UserService {
     public boolean changeStatus(User user, int userStatusCode) {
         return false;
     }
+
+
 
 
 }

@@ -59,6 +59,7 @@ public class OrderServiceImpl implements OrderService {
         orderNew.setStatus("Новый");
         orderNew.setUserId(user);
         save(orderNew);
+
         System.out.println("Запрос успешно создан!!");
         return orderNew;
     }
@@ -67,4 +68,10 @@ public class OrderServiceImpl implements OrderService {
     public void save(Order order) {
         orderRep.save(order);
     }
+
+    @Override
+    public Order checkSpam(Long userId, Long recipient) {
+        return orderRep.check(userId,recipient);
+    }
+
 }

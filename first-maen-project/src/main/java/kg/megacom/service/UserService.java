@@ -3,6 +3,7 @@ package kg.megacom.service;
 import kg.megacom.models.User;
 import kg.megacom.service.impl.UserServiceImpl;
 
+import javax.jws.soap.SOAPBinding;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface UserService {
     User findByEmail(String email) throws SQLException;
 
     boolean changeStatus(User user, int userStatusCode);
+
+
 }
