@@ -13,14 +13,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try {
-            byte[] bytes = Files.readAllBytes(Paths.get("D:\\НУР\\GitHub\\SQL\\test.txt"));
-            String text = new String(bytes, StandardCharsets.UTF_8);
-            List<String> word = Arrays.asList(text.split("\\PL+ "));
-            System.out.println(word.stream().filter(c -> c.length()>= 3).count());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            byte[] bytes = Files.readAllBytes(Paths.get("D:\\НУР\\GitHub\\SQL\\test.txt"));
+//            String text = new String(bytes, StandardCharsets.UTF_8);
+//            List<String> word = Arrays.asList(text.split("\\PL+ "));
+//            System.out.println(word.stream().filter(c -> c.length()>= 3).count());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
 //        List<User> users = new ArrayList<>(Arrays.asList(
@@ -68,8 +68,6 @@ public class Main {
 //        map.put("user1", "meerim");
 //
 //        System.out.println(map.entrySet().stream().filter(c -> c.getValue().equals("aidai")).collect(Collectors.toList()));
-
-
 
     }
 }

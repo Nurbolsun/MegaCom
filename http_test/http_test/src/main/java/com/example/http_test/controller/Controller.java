@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
   @GetMapping("/getHome")
     public String getHome(){
-      return "HomePage 1 for my students";
+      return "HomePage 1 for my students MegaCom";
   }
   @GetMapping("/newProject")
   public  String createNewProject(){
