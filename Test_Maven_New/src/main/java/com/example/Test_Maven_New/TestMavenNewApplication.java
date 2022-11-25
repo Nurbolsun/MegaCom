@@ -14,8 +14,9 @@ public class TestMavenNewApplication {
 
 	public static void main(String[] args) {
 		//Создаем ссылку, куда нам необходимо обратиться
+
 		//  String url1 = "http://10.244.53.125:8080/api/v1/controller/";
-		String url1 = "http://10.244.53.134:8080/api/v1/controller/newProject";
+		String url1 = "http:localhost:8080/api/v1/controller/newProject";
 
 		//создаем клиента
 		OkHttpClient client = new OkHttpClient();

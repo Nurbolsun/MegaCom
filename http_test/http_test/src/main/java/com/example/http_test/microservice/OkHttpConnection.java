@@ -11,7 +11,7 @@ public class OkHttpConnection {
 
 	public String getJson() {
 		//Создаем ссылку, куда нам необходимо обратиться
-		String url1 = "https://jsonplaceholder.typicode.com/posts";
+		String url1 = "http:localhost:8080/api/v1/controller/newProject";
 		OkHttpClient client = new OkHttpClient();
 
 		Request request = new Request.Builder()
