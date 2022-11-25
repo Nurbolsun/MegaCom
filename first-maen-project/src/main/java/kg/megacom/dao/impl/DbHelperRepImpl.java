@@ -10,7 +10,7 @@ public class DbHelperRepImpl implements DbHelperRep {
 
     private final String url = "jdbc:postgresql://localhost/db_tinder";
     private final String user = "postgres";
-    private final String password = "5432";
+    private final String password = "postgres";
 
 
     public Connection connect() throws SQLException {
