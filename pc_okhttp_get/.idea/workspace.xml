@@ -5,6 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b897932c-8b38-4541-b99e-3516cc31cf92" name="Default Changelist" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/jSon_practic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/microservices/OkHttoConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/models/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/models/Hobby.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/models/Job.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/models/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jSon_practic/src/main/java/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+>>>>>>> 01c02ab6e2038c27d38537c80f26b7d21337a789
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +45,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -42,6 +58,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> 01c02ab6e2038c27d38537c80f26b7d21337a789
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -57,8 +89,12 @@
       <option name="presentableId" value="Default" />
       <updated>1669374236946</updated>
       <workItem from="1669374238032" duration="1134000" />
+<<<<<<< HEAD
       <workItem from="1669388999779" duration="662000" />
       <workItem from="1669698228956" duration="1330000" />
+=======
+      <workItem from="1669379308408" duration="1715000" />
+>>>>>>> 01c02ab6e2038c27d38537c80f26b7d21337a789
     </task>
     <servers />
   </component>
