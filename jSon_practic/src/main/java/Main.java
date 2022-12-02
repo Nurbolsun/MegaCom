@@ -3,6 +3,7 @@ import microservices.OkHttoConnection;
 import models.Employee;
 import models.Hobby;
 import org.json.JSONObject;
+import org.json.XML;
 import service.UserService;
 import service.impl.UserServiceImpl;
 
@@ -23,7 +24,7 @@ public class Main {
         OkHttoConnection connection = new OkHttoConnection();
         String response = connection.getJson();
 
-        JSONObject jsonObject = XML.toJSONObject(response);
+        JSONObject jsonObject = org.json.XML.toJSONObject(response);
         Gson gson = new Gson();
 
         Employee[] employees = gson.fromJson(response, Employee[].class);
