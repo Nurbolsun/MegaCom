@@ -1,4 +1,4 @@
-package kg.megacom.authorizationservice.models;
+package kg.megacom.authorizationservice.models.entities;
 
 import kg.megacom.authorizationservice.models.enums.AccountStatus;
 import lombok.*;
@@ -12,19 +12,25 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Table(name = "tb_account")
 public class Account{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    @Column(unique = true)
     String login;
     String password;
+    @Column(name = "count_of_block")
     int count;
     AccountStatus status;
+
+    @Temporal(TemporalType.TIME)
     Date addDate;
+
     Date updateDate;
     boolean active;
-
 
     @PreUpdate
     protected void onUpdate(){

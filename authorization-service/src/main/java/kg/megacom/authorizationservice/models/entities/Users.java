@@ -1,5 +1,6 @@
-package kg.megacom.authorizationservice.models;
+package kg.megacom.authorizationservice.models.entities;
 
+import kg.megacom.authorizationservice.models.entities.Account;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

@@ -1,9 +1,12 @@
 package kg.megacom.authorizationservice.dao;
 
-import kg.megacom.authorizationservice.models.Users;
+import kg.megacom.authorizationservice.models.entities.Account;
+import kg.megacom.authorizationservice.models.entities.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRep extends JpaRepository<Users,Long> {
+
+    Users findByAccount(Account account);
 }
