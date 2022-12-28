@@ -20,7 +20,7 @@ public class Master {
     String name;
     String surname;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "salon_id")
     Salon salon;
 

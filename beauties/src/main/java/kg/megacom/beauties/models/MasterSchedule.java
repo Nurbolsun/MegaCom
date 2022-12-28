@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -24,5 +25,8 @@ public class MasterSchedule {
     Date endTime;
     @Enumerated(EnumType.STRING)
     WorkDayEnum workDay;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "schedule")
+    List<Master> masters;
 
 }
