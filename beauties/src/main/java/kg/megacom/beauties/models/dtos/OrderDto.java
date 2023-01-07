@@ -1,17 +1,11 @@
 package kg.megacom.beauties.models.dtos;
 
-import kg.megacom.beauties.models.Client;
-import kg.megacom.beauties.models.Master;
-import kg.megacom.beauties.models.enums.OrderStatusEnum;
+import kg.megacom.beauties.enums.OrderStatusEnum;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Getter
@@ -25,4 +19,5 @@ public class OrderDto {
     OrderStatusEnum status;
     ClientDto client;
     MasterDto master;
+    boolean active;
 }

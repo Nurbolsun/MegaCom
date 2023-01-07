@@ -1,11 +1,12 @@
 package kg.megacom.authorizationservice.controller;
 
+import io.swagger.annotations.Api;
 import kg.megacom.authorizationservice.models.dtos.AccountDto;
 import kg.megacom.authorizationservice.models.request.AuthRequest;
 import kg.megacom.authorizationservice.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@Api(tags = "Авторизация")
 @RestController
 @RequestMapping("api/v1/auth")
 public class AuthController {

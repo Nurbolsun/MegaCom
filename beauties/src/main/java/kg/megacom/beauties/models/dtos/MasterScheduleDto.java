@@ -1,6 +1,6 @@
 package kg.megacom.beauties.models.dtos;
 
-import kg.megacom.beauties.models.enums.WorkDayEnum;
+import kg.megacom.beauties.enums.WorkDayEnum;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

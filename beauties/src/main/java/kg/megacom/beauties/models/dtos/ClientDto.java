@@ -14,4 +14,5 @@ public class ClientDto {
     String surname;
     String email;
     String cellPhoneNum;
+    boolean active;
 }
