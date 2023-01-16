@@ -33,11 +33,14 @@ public class Order {
     @OneToOne
     @JoinColumn(name = "master_id")
     Master master;
+    boolean active;
+
 
     @PrePersist
     protected void onCreate() {
         status = OrderStatusEnum.CONFIRM;
+        addDate = new Date();
         updateDate = new Date();
-        appointment_date = new Date();
+        active = true;
     }
 }

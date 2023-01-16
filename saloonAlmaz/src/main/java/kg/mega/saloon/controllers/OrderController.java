@@ -2,9 +2,8 @@ package kg.mega.saloon.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import kg.mega.saloon.models.dto.MasterDto;
 import kg.mega.saloon.models.dto.OrderDto;
-import kg.mega.saloon.service.MasterService;
+import kg.mega.saloon.models.requests.SaveOrderRequest;
 import kg.mega.saloon.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,9 +23,18 @@ public class OrderController {
     @PostMapping("/save")
     @ApiOperation("Сохранение")
     ResponseEntity<?> save(@RequestBody OrderDto order) {
-
         try {
             return new ResponseEntity<>(service.save(order), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
+        }
+    }
+
+    @PostMapping("/create")
+    @ApiOperation("Создать заявку")
+    ResponseEntity<?>create(@RequestBody SaveOrderRequest orderRequest){
+        try {
+            return new ResponseEntity<>(service.create(orderRequest), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
@@ -57,4 +65,6 @@ public class OrderController {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
+
+
 }

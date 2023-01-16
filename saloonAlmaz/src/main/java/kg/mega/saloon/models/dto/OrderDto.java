@@ -1,4 +1,5 @@
 package kg.mega.saloon.models.dto;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import kg.mega.saloon.enums.OrderStatusEnum;
 import kg.mega.saloon.models.entities.Client;
 import kg.mega.saloon.models.entities.Master;
@@ -17,6 +18,8 @@ public class OrderDto {
     Date updateDate;
     Date appointment_date;
     OrderStatusEnum status;
-    Client client;
-    Master master;
+    ClientDto client;
+    MasterDto master;
+    @JsonIgnore
+    boolean active;
 }

@@ -3,6 +3,7 @@ package kg.mega.saloon.controllers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import kg.mega.saloon.models.dto.MasterDto;
+import kg.mega.saloon.models.requests.SaveMasterRequest;
 import kg.mega.saloon.service.MasterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,15 @@ public class MasterController {
     ResponseEntity<?> save(@RequestBody MasterDto master) {
         try {
             return new ResponseEntity<>(service.save(master), HttpStatus.CREATED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
+        }
+    }
+    @PostMapping("/create")
+    @ApiOperation("Создать")
+    ResponseEntity<?>create(@ModelAttribute SaveMasterRequest master){
+        try {
+            return new ResponseEntity<>(service.create(master), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
@@ -54,4 +64,6 @@ public class MasterController {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
+
+
 }

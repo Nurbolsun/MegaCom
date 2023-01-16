@@ -1,18 +1,23 @@
 package kg.mega.saloon.models.dto;
-import kg.mega.saloon.enums.WorkDayEnum;
+
 import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
-import java.util.Date;
 
 @Getter
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@NoArgsConstructor
 public class MasterScheduleDto {
     Long id;
-    Date startTime;
-    Date endTime;
-    WorkDayEnum workDay;
+    MasterDto master;
+    ScheduleDto schedule;
 
+
+    public MasterScheduleDto(MasterDto master, ScheduleDto schedule) {
+        this.master = master;
+        this.schedule = schedule;
+    }
 }
