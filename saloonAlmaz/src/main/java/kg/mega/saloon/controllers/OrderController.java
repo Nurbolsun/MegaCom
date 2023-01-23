@@ -2,14 +2,18 @@ package kg.mega.saloon.controllers;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import kg.mega.saloon.enums.WorkDayEnum;
+import kg.mega.saloon.models.dto.MasterDto;
 import kg.mega.saloon.models.dto.OrderDto;
-import kg.mega.saloon.models.requests.SaveOrderRequest;
+import kg.mega.saloon.models.requests.OrderRequest;
+import kg.mega.saloon.service.MasterService;
 import kg.mega.saloon.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Calendar;
 import java.util.List;
 
 @Api(tags = "Заявка")
@@ -20,21 +24,25 @@ public class OrderController {
     @Autowired
     private OrderService service;
 
-    @PostMapping("/save")
-    @ApiOperation("Сохранение")
-    ResponseEntity<?> save(@RequestBody OrderDto order) {
+
+    @PostMapping("/create")
+    @ApiOperation("Создание заявки")
+    ResponseEntity<?> save(@RequestBody OrderRequest order) {
         try {
-            return new ResponseEntity<>(service.save(order), HttpStatus.CREATED);
+
+            return new ResponseEntity<>(service.create(order), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
     }
 
-    @PostMapping("/create")
-    @ApiOperation("Создать заявку")
-    ResponseEntity<?>create(@RequestBody SaveOrderRequest orderRequest){
+
+
+    @PostMapping("/save")
+    @ApiOperation("Сохранение")
+    ResponseEntity<?> save(@RequestBody OrderDto order) {
         try {
-            return new ResponseEntity<>(service.create(orderRequest), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.save(order), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }

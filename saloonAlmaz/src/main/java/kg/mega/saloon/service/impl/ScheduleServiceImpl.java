@@ -3,21 +3,13 @@ package kg.mega.saloon.service.impl;
 import kg.mega.saloon.dao.ScheduleRep;
 import kg.mega.saloon.enums.WorkDayEnum;
 import kg.mega.saloon.mappers.ScheduleMapper;
-import kg.mega.saloon.models.dto.MasterDto;
-import kg.mega.saloon.models.dto.SaloonDto;
 import kg.mega.saloon.models.dto.ScheduleDto;
-import kg.mega.saloon.models.requests.SaveScheduleRequest;
-import kg.mega.saloon.models.responses.ScheduleResponse;
-import kg.mega.saloon.service.MasterService;
-import kg.mega.saloon.service.SaloonService;
 import kg.mega.saloon.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalTime;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class ScheduleServiceImpl implements ScheduleService {
@@ -40,6 +32,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public ScheduleDto delete(Long id) {
         ScheduleDto masterSchedule = findById(id);
+        //????
         return null;
     }
 
@@ -56,30 +49,13 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public List<ScheduleDto> getScheduleByMasterId(Long id) {
         return mapper.toDtos(rep.getScheduleByMasterId(id));
+
     }
 
     @Override
-    public ScheduleDto create(SaveScheduleRequest scheduleResponse) {
-
-        ScheduleDto scheduleDto = new ScheduleDto();
-        scheduleDto.setWorkDay(scheduleResponse.getWorkDay());
-        scheduleDto.setStartTime(scheduleResponse.getStartTime());
-        scheduleDto.setEndTime(scheduleResponse.getEndTime());
-
-        return mapper.toDto(rep.save(mapper.toEntity(scheduleDto)));
+    public ScheduleDto create(WorkDayEnum workDayEnum, LocalTime startTime, LocalTime endTime) {
+        return save(new ScheduleDto(startTime,endTime,workDayEnum));
     }
 
-    @Override
-    public ScheduleDto create1(WorkDayEnum workDay, Date startTime, Date endTime) {
-        SimpleDateFormat format = new SimpleDateFormat("hh:mm");
-        format.format(startTime);
-        format.format(endTime);
-        ScheduleDto scheduleDto = new ScheduleDto();
-        scheduleDto.setWorkDay(workDay);
-        scheduleDto.setStartTime(startTime);
-        scheduleDto.setEndTime(endTime);
-
-        return mapper.toDto(rep.save(mapper.toEntity(scheduleDto)));
-    }
 
 }

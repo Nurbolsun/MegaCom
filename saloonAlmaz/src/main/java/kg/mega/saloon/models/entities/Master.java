@@ -26,10 +26,6 @@ public class Master {
     @JoinColumn(name="saloon_id")
     Saloon saloon;
 
-//    @ManyToOne
-//    @JoinColumn(name="schedule_id")
-//    Schedule schedule;
-
     @Enumerated(EnumType.STRING)
     WorkTypeEnum workType;
 

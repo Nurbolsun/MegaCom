@@ -1,5 +1,4 @@
 package kg.mega.saloon.models.dto;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -12,7 +11,6 @@ import javax.persistence.Column;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ClientDto {
-    @JsonIgnore
     Long id;
     String name;
     String surname;

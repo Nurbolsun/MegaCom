@@ -30,7 +30,6 @@ public class MasterController {
         }
     }
     @PostMapping("/create")
-    @ApiOperation("Создать")
     ResponseEntity<?>create(@ModelAttribute SaveMasterRequest master){
         try {
             return new ResponseEntity<>(service.create(master), HttpStatus.CREATED);
