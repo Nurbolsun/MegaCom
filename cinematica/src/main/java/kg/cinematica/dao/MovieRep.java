@@ -10,6 +10,7 @@ import java.awt.print.Pageable;
 import java.util.List;
 
 public interface MovieRep extends JpaRepository<Movie, Long> {
+   // @Query("SELECT id, image, pg, name from Movie")
     List<Movie> findAllByActiveIsTrue(PageRequest pageable);
 
 
