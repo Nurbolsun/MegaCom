@@ -13,7 +13,7 @@ import java.util.Date;
 public class RoomDto {
     Long id;
     CinemaDto cinema;
-    int seatCount;
+    String name;
     Date addDate;
     Date updateDate;
     boolean active;

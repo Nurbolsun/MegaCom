@@ -3,6 +3,7 @@ package kg.cinematica.controllers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import kg.cinematica.models.dto.CinemaDto;
+import kg.cinematica.models.requests.CinemaRequest;
 import kg.cinematica.service.CinemaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,9 +21,9 @@ public class CinemaController {
 
     @PostMapping
     @ApiOperation("Сохранение кинотеатра")
-    ResponseEntity<?> save(@RequestBody CinemaDto cinemaDto){
+    ResponseEntity<?> save(@ModelAttribute CinemaRequest cinemaRequest){
         try {
-            return new ResponseEntity<>(service.save(cinemaDto), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.create(cinemaRequest), HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }

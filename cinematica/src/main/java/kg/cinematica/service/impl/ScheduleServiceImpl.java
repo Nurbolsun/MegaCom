@@ -3,11 +3,13 @@ package kg.cinematica.service.impl;
 import kg.cinematica.dao.ScheduleRep;
 import kg.cinematica.mappers.ScheduleMapper;
 import kg.cinematica.models.dto.ScheduleDto;
+import kg.cinematica.models.requests.ScheduleRequest;
 import kg.cinematica.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
+import java.util.Date;
 import java.util.List;
 @Service
 public class ScheduleServiceImpl implements ScheduleService {
@@ -43,7 +45,7 @@ public class ScheduleServiceImpl implements ScheduleService {
     }
 
     @Override
-    public ScheduleDto create(LocalTime startTime) {
-        return save(new ScheduleDto(startTime));
+    public ScheduleDto create(Date addDate, LocalTime startTime ) {
+        return save(new ScheduleDto(addDate, startTime));
     }
 }

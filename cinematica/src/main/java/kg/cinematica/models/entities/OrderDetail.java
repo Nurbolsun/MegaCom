@@ -1,12 +1,21 @@
 package kg.cinematica.models.entities;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
+import javax.persistence.*;
 import java.util.Date;
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity //таблица postgres
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@Table(name = "tb_order_detail")
 public class OrderDetail {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //генерация key
+    Long id;
     @ManyToOne
     @JoinColumn(name = "tb_seat_schedule")
     SeatSchedule seatSchedule;

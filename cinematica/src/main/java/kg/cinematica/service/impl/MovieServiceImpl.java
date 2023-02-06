@@ -3,10 +3,13 @@ package kg.cinematica.service.impl;
 import kg.cinematica.dao.MovieRep;
 import kg.cinematica.mappers.MovieMapper;
 import kg.cinematica.models.dto.MovieDto;
+import kg.cinematica.models.entities.Movie;
+import kg.cinematica.models.requests.MovieRequest;
 import kg.cinematica.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 @Service
 public class MovieServiceImpl implements MovieService {
@@ -40,4 +43,16 @@ public class MovieServiceImpl implements MovieService {
     public List<MovieDto> sortByDate() {
         return null;
     }
+
+    @Override
+    public MovieDto create(MovieRequest movieRequest) {
+        MovieDto movieDto = new MovieDto();
+        movieDto.setName(movieRequest.getName());
+        movieDto.setDef(movieRequest.getDef());
+        movieDto.setImage(movieRequest.getImage());
+        movieDto.setRating(movieRequest.getRating());
+        movieDto.setPg(movieRequest.getPg());
+        return save(movieDto);
+    }
+
 }

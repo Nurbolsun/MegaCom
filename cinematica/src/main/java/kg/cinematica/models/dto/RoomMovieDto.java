@@ -15,7 +15,6 @@ public class RoomMovieDto {
     RoomDto room;
     MovieDto movie;
     ScheduleDto schedule;
-    PriceDto price;
     Date addDate;
     Date updateDate;
     boolean active;

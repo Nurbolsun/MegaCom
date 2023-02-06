@@ -10,19 +10,18 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity //таблица postgres
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table (name = "tb_room")
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+    String name;
 
     @ManyToOne
     @JoinColumn(name = "tb_cinema")
     Cinema cinema;
-
-    int seatCount;
 
     Date addDate;
     Date updateDate;

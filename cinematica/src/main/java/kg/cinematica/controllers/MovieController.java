@@ -3,6 +3,8 @@ package kg.cinematica.controllers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import kg.cinematica.models.dto.MovieDto;
+import kg.cinematica.models.entities.Movie;
+import kg.cinematica.models.requests.MovieRequest;
 import kg.cinematica.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,9 +22,9 @@ public class MovieController {
 
     @PostMapping("/save")
     @ApiOperation(("Сохранение фильма"))
-    ResponseEntity<?> save (@RequestBody MovieDto movieDto){
+    ResponseEntity<?> save (@ModelAttribute MovieRequest movieRequest){
         try {
-            return new ResponseEntity<>(service.save(movieDto), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.create(movieRequest), HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
@@ -51,4 +53,6 @@ public class MovieController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
+
+
 }

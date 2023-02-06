@@ -3,11 +3,10 @@ package kg.cinematica.service.impl;
 import kg.cinematica.dao.CinemaRep;
 import kg.cinematica.mappers.CinemaMapper;
 import kg.cinematica.models.dto.CinemaDto;
+import kg.cinematica.models.requests.CinemaRequest;
 import kg.cinematica.service.CinemaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -43,5 +42,14 @@ public class CinemaServiceImpl implements CinemaService {
     @Override
     public List<CinemaDto> sortByDate() {
         return null;
+    }
+
+    @Override
+    public CinemaDto create(CinemaRequest cinemaRequest) {
+        CinemaDto cinemaDto = new CinemaDto();
+        cinemaDto.setName(cinemaRequest.getName());
+        cinemaDto.setAddress(cinemaRequest.getAddress());
+        cinemaDto.setPhotoLink(cinemaRequest.getPhotoLink());
+        return save(cinemaDto);
     }
 }
