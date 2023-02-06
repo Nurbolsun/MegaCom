@@ -62,8 +62,5 @@ public class SeatController {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
-    @GetMapping("rooms/{number}")
-    Seat findRoom(@PathVariable ("num") String num){
-        return service.findRoom(num);
-    }
+
 }

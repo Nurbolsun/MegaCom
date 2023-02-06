@@ -7,8 +7,10 @@ import kg.cinematica.models.entities.Movie;
 import kg.cinematica.models.requests.MovieRequest;
 import kg.cinematica.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.Pageable;
 import java.util.ArrayList;
 import java.util.List;
 @Service
@@ -54,5 +56,8 @@ public class MovieServiceImpl implements MovieService {
         movieDto.setPg(movieRequest.getPg());
         return save(movieDto);
     }
-
+    @Override
+    public List<MovieDto> findAllActiveWithLimitOffset(int limit, int offset) {
+        return mapper.toDtos(rep.findAllByActiveIsTrue(PageRequest.of(offset, limit)));
+    }
 }

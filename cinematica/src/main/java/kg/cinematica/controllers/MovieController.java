@@ -53,6 +53,9 @@ public class MovieController {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
     }
-
+    @GetMapping("/findAllByActiveIsTrue")
+    ResponseEntity<List<MovieDto>> findAllByActiveIsTrue(){
+        return ResponseEntity.ok(service.findAllActiveWithLimitOffset(2,1));
+    }
 
 }

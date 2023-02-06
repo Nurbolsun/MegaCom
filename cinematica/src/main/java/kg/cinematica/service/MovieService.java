@@ -10,4 +10,5 @@ import java.util.List;
 
 public interface MovieService extends BaseService<MovieDto>{
     MovieDto create(MovieRequest movieRequest);
+    List<MovieDto> findAllActiveWithLimitOffset (int limit, int offset);
 }

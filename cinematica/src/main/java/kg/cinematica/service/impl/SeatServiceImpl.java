@@ -60,8 +60,4 @@ public class SeatServiceImpl implements SeatService {
         return save(seatDto);
     }
 
-    @Override
-    public Seat findRoom(String num){
-        return rep.findRoom(num);
-    }
 }
