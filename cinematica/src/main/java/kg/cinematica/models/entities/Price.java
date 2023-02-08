@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -18,17 +19,19 @@ public class Price {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    int price;
+    Double price;
 
     @Enumerated(EnumType.STRING)
     Type type;
 
-    Date addDate;
-    Date updateDate;
+    LocalDateTime addDate;
+    LocalDateTime updateDate;
     boolean active;
 
     @PrePersist
     protected void onCreate() {
+        addDate = LocalDateTime.now();
+        updateDate = LocalDateTime.now();
         active = true;
     }
 }

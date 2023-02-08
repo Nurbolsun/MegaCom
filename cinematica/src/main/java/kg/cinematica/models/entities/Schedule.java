@@ -4,6 +4,8 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -19,12 +21,16 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     LocalTime startTime;
-    Date addDate;
-    Date updateDate;
+    LocalDate startDate;
+
+    LocalDateTime addDate;
+    LocalDateTime updateDate;
     boolean active;
 
     @PrePersist
     protected void onCreate() {
+        addDate = LocalDateTime.now();
+        updateDate = LocalDateTime.now();
         active = true;
     }
 

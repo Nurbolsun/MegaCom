@@ -39,10 +39,6 @@ public class CinemaServiceImpl implements CinemaService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<CinemaDto> sortByDate() {
-        return null;
-    }
 
     @Override
     public CinemaDto create(CinemaRequest cinemaRequest) {

@@ -43,10 +43,6 @@ public class RoomServiceImpl implements RoomService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<RoomDto> sortByDate() {
-        return null;
-    }
 
     @Override
     public RoomDto create(RoomRequest roomRequest) {
@@ -56,5 +52,10 @@ public class RoomServiceImpl implements RoomService {
         room.setName(roomRequest.getName());
         room.setCinema(cinemaDto);
         return save(room);
+    }
+
+    @Override
+    public RoomDto findRoomByRoomMovieId(Long roomMovieId) {
+        return mapper.toDto(rep.findRoomByRoomMovieId(roomMovieId));
     }
 }

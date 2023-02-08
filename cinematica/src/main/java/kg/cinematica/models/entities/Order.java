@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
 @Getter
@@ -19,12 +20,14 @@ public class Order {
     Long id;
     int price;
     LocalTime startTime;
-    Date addDate;
-    Date updateDate;
+    LocalDateTime addDate;
+    LocalDateTime updateDate;
     boolean active;
 
     @PrePersist
     protected void onCreate() {
+        addDate = LocalDateTime.now();
+        updateDate = LocalDateTime.now();
         active = true;
     }
 

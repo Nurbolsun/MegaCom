@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 @Getter
@@ -15,17 +16,14 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ScheduleDto {
     Long id;
-//    @JsonFormat(pattern = "dd-MM-yyyy", shape = JsonFormat.Shape.STRING)
-//    @Temporal(value = TemporalType.DATE)
-    Date addDate;
-//    @JsonFormat(pattern = "hh:mm", shape = JsonFormat.Shape.STRING)
-//    @Temporal(value = TemporalType.TIME)
+    LocalDate startDate;
     LocalTime startTime;
+
     Date updateDate;
     boolean active;
 
-    public ScheduleDto(Date addDate, LocalTime startTime) {
-        this.addDate = addDate;
+    public ScheduleDto(LocalDate startDate, LocalTime startTime) {
+        this.startDate = startDate;
         this.startTime = startTime;
     }
 

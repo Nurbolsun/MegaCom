@@ -41,10 +41,6 @@ public class OrderServiceImpl implements OrderService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<OrderDto> sortByDate() {
-        return null;
-    }
 
     @Override
     public OrderDto create(OrderRequest orderRequest) {

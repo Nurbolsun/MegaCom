@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Api(tags = "Зал/Фильм")
+@Api(tags = "Сеанс")
 @RestController
 @RequestMapping("/api/v1/room_movie")
 public class RoomMovieController {

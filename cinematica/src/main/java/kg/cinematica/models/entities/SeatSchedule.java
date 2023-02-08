@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -20,22 +21,24 @@ public class SeatSchedule {
     Long id;
 
     @ManyToOne
-    @JoinColumn(name = "tb_seat")
+    @JoinColumn(name = "seat_id")
     Seat seat;
 
     @ManyToOne
-    @JoinColumn(name = "tb_room_movie")
+    @JoinColumn(name = "room_movie_id")
     RoomMovie roomMovie;
 
     @Enumerated(EnumType.STRING)
     Status status;
 
-    Date addDate;
-    Date updateDate;
+    LocalDateTime addDate;
+    LocalDateTime updateDate;
     boolean active;
 
     @PrePersist
     protected void onCreate() {
+        addDate = LocalDateTime.now();
+        updateDate = LocalDateTime.now();
         active = true;
     }
 }

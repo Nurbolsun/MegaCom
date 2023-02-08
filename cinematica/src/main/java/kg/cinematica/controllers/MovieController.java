@@ -54,8 +54,8 @@ public class MovieController {
         }
     }
     @GetMapping("/findAllByActiveIsTrue")
-    ResponseEntity<List<MovieDto>> findAllByActiveIsTrue(){
-        return ResponseEntity.ok(service.findAllActiveWithLimitOffset(2,1));
+    ResponseEntity<List<MovieDto>> findAllByActiveIsTrue(@RequestParam int limit, int offset){
+        return ResponseEntity.ok(service.findAllActiveWithLimitOffset(limit, offset));
     }
 
 }

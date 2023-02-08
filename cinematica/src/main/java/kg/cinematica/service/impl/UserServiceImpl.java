@@ -27,8 +27,4 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    @Override
-    public List<UserDto> sortByDate() {
-        return null;
-    }
 }

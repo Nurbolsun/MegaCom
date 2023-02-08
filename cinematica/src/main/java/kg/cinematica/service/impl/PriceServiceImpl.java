@@ -39,10 +39,6 @@ public class PriceServiceImpl implements PriceService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<PriceDto> sortByDate() {
-        return null;
-    }
 
     @Override
     public PriceDto create(PriceRequest priceRequest) {

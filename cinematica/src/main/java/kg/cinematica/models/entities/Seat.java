@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -19,16 +20,19 @@ public class Seat {
     Long id;
     int num;
     int row;
-    Date addDate;
-    Date updateDate;
-    boolean active;
+
     @ManyToOne
-    @JoinColumn(name = "tb_room")
+    @JoinColumn(name = "room_id")
     Room room;
 
+    LocalDateTime addDate;
+    LocalDateTime updateDate;
+    boolean active;
 
     @PrePersist
     protected void onCreate() {
+        addDate = LocalDateTime.now();
+        updateDate = LocalDateTime.now();
         active = true;
     }
 

@@ -8,5 +8,4 @@ public interface BaseService <Z>{
     Z findById(Long id);
     Z delete(Long id);
     List<Z> findAll();
-    List<Z> sortByDate();
 }

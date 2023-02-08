@@ -13,7 +13,7 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PriceDto {
     Long id;
-    int price;
+    Double price;
     Type type;
     Date addDate;
     Date updateDate;

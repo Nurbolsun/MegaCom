@@ -8,6 +8,7 @@ import kg.cinematica.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
@@ -39,13 +40,9 @@ public class ScheduleServiceImpl implements ScheduleService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<ScheduleDto> sortByDate() {
-        return null;
-    }
 
     @Override
-    public ScheduleDto create(Date addDate, LocalTime startTime ) {
-        return save(new ScheduleDto(addDate, startTime));
+    public ScheduleDto create(LocalDate startDate, LocalTime startTime ) {
+        return save(new ScheduleDto(startDate, startTime));
     }
 }

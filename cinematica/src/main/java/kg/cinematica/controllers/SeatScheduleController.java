@@ -6,6 +6,7 @@ import kg.cinematica.models.dto.SeatDto;
 import kg.cinematica.models.dto.SeatScheduleDto;
 import kg.cinematica.models.requests.SeatRequest;
 import kg.cinematica.models.requests.SeatScheduleRequest;
+import kg.cinematica.models.response.SeatScheduleResponse;
 import kg.cinematica.service.SeatScheduleService;
 import kg.cinematica.service.SeatService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@Api(tags = "Место/Фильм")
+@Api(tags = "Место/Грфик")
 @RestController
 @RequestMapping("/api/v1/seat_schedule")
 public class SeatScheduleController {
@@ -23,9 +24,9 @@ public class SeatScheduleController {
 
     @PostMapping("/save")
     @ApiOperation("Сохранение")
-    ResponseEntity<?> create(@ModelAttribute SeatScheduleRequest seat){
+    ResponseEntity<?> create(@RequestParam Long roomMovieId, @RequestParam List<Long> seatsId){
         try {
-            return new ResponseEntity<>(service.create(seat), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.create(roomMovieId, seatsId), HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
@@ -53,5 +54,10 @@ public class SeatScheduleController {
         } catch (Exception e) {
             return new ResponseEntity(e.getMessage(), HttpStatus.NOT_FOUND);
         }
+    }
+    @GetMapping("/getByRoomMovieId")
+    @ApiOperation("Поиск по id сеанса")
+    ResponseEntity<List<SeatScheduleResponse>> getByRoomMovieId(@RequestParam Long roomMovieId){
+        return ResponseEntity.ok(service.getRoomMovieId(roomMovieId));
     }
 }

@@ -10,6 +10,6 @@ import lombok.experimental.FieldDefaults;
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PriceRequest {
-    int price;
+    Double price;
     Type type;
 }

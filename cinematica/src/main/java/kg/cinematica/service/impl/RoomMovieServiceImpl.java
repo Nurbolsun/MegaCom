@@ -7,6 +7,7 @@ import kg.cinematica.models.dto.RoomDto;
 import kg.cinematica.models.dto.RoomMovieDto;
 import kg.cinematica.models.dto.ScheduleDto;
 import kg.cinematica.models.requests.RoomMovieRequest;
+import kg.cinematica.models.response.Response;
 import kg.cinematica.service.MovieService;
 import kg.cinematica.service.RoomMovieService;
 import kg.cinematica.service.RoomService;
@@ -14,6 +15,7 @@ import kg.cinematica.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 @Service
 public class RoomMovieServiceImpl implements RoomMovieService {
@@ -47,13 +49,9 @@ public class RoomMovieServiceImpl implements RoomMovieService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<RoomMovieDto> sortByDate() {
-        return null;
-    }
 
     @Override
-    public RoomMovieDto create(RoomMovieRequest roomMovieRequest) {
+    public Response create(RoomMovieRequest roomMovieRequest) {
         RoomDto roomDto = roomService.findById(roomMovieRequest.getRoomId());
         MovieDto movieDto = movieService.findById(roomMovieRequest.getMovieId());
         ScheduleDto scheduleDto = scheduleService.findById(roomMovieRequest.getScheduleId());
@@ -62,6 +60,12 @@ public class RoomMovieServiceImpl implements RoomMovieService {
         roomMovieDto.setMovie(movieDto);
         roomMovieDto.setRoom(roomDto);
         roomMovieDto.setSchedule(scheduleDto);
-        return save(roomMovieDto);
+        save(roomMovieDto);
+        return new Response("Успешно сохранено!");
+    }
+
+    @Override
+    public List<RoomMovieDto> findRoomMovieByMovieId(Long movieId, LocalDate startDate) {
+        return mapper.toDtos(rep.findRoomMovieByMovieId(movieId, startDate));
     }
 }

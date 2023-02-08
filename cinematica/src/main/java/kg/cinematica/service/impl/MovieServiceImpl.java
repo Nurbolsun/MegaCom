@@ -41,10 +41,6 @@ public class MovieServiceImpl implements MovieService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<MovieDto> sortByDate() {
-        return null;
-    }
 
     @Override
     public MovieDto create(MovieRequest movieRequest) {

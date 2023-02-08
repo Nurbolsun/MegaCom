@@ -14,11 +14,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.*;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.List;
 
-@Api(tags = "График филма")
+@Api(tags = "График")
 @RestController
 @RequestMapping("/api/v1/schedule")
 public class ScheduleController {
@@ -27,10 +28,10 @@ public class ScheduleController {
 
     @PostMapping("/save")
     @ApiOperation("Сохранение")
-    ResponseEntity<?> save (@RequestParam @DateTimeFormat(pattern = "HH:mm")LocalTime startTime,
-                            @RequestParam @DateTimeFormat(pattern = "dd-MM-yyyy") Date addDate){
+    ResponseEntity<?> save (@RequestParam (defaultValue = "HH:mm")@DateTimeFormat(pattern = "HH:mm") LocalTime startTime,
+                            @RequestParam (defaultValue = "dd-MM-yyyy")@DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate startDate){
         try {
-            return new ResponseEntity<>(service.create(addDate, startTime), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.create(startDate, startTime), HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }

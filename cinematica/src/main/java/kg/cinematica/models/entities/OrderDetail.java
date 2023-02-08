@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 @Getter
 @Setter
@@ -17,19 +18,21 @@ public class OrderDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //генерация key
     Long id;
     @ManyToOne
-    @JoinColumn(name = "tb_seat_schedule")
+    @JoinColumn(name = "seat_schedule_id")
     SeatSchedule seatSchedule;
 
     @ManyToOne
-    @JoinColumn(name = "tb_order")
+    @JoinColumn(name = "order_id")
     Order order;
 
-    Date addDate;
-    Date updateDate;
+    LocalDateTime addDate;
+    LocalDateTime updateDate;
     boolean active;
 
     @PrePersist
     protected void onCreate() {
+        addDate = LocalDateTime.now();
+        updateDate = LocalDateTime.now();
         active = true;
     }
 }

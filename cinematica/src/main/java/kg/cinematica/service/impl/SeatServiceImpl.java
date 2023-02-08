@@ -43,10 +43,6 @@ public class SeatServiceImpl implements SeatService {
         return mapper.toDtos(rep.findAll());
     }
 
-    @Override
-    public List<SeatDto> sortByDate() {
-        return null;
-    }
 
     @Override
     public SeatDto create(SeatRequest seatRequest) {
@@ -58,6 +54,11 @@ public class SeatServiceImpl implements SeatService {
         seatDto.setRoom(roomDto);
 
         return save(seatDto);
+    }
+
+    @Override
+    public List<SeatDto> findSeatsByRoomId(Long roomMovieId) {
+        return mapper.toDtos(rep.findSeatsByRoomId(roomMovieId));
     }
 
 }
