@@ -1,5 +1,6 @@
 package kg.cinematica.models.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,7 +16,10 @@ public class RoomMovieDto {
     RoomDto room;
     MovieDto movie;
     ScheduleDto schedule;
+    @JsonIgnore
     Date addDate;
+    @JsonIgnore
     Date updateDate;
+    @JsonIgnore
     boolean active;
 }

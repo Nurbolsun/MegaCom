@@ -48,7 +48,7 @@ public class SeatController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод всех заявок")
+    @ApiOperation("Вывод всех мест")
     ResponseEntity<List<SeatDto>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }

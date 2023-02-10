@@ -1,5 +1,6 @@
 package kg.cinematica.models.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import kg.cinematica.enums.Type;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -13,9 +14,12 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PriceDto {
     Long id;
-    Double price;
+    int price;
     Type type;
+    @JsonIgnore
     Date addDate;
+    @JsonIgnore
     Date updateDate;
+    @JsonIgnore
     boolean active;
 }

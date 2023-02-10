@@ -46,7 +46,7 @@ public class ScheduleController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод все графики")
+    @ApiOperation("Вывод всех график")
     ResponseEntity<List<ScheduleDto>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }

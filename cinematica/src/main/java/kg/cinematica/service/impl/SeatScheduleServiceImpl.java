@@ -7,8 +7,6 @@ import kg.cinematica.models.dto.RoomDto;
 import kg.cinematica.models.dto.RoomMovieDto;
 import kg.cinematica.models.dto.SeatDto;
 import kg.cinematica.models.dto.SeatScheduleDto;
-import kg.cinematica.models.entities.SeatSchedule;
-import kg.cinematica.models.requests.SeatScheduleRequest;
 import kg.cinematica.models.response.SeatScheduleResponse;
 import kg.cinematica.service.RoomMovieService;
 import kg.cinematica.service.RoomService;
@@ -73,7 +71,7 @@ public class SeatScheduleServiceImpl implements SeatScheduleService {
     }
 
     @Override
-    public List<SeatScheduleDto> findByRoomMovieAndSeatsId(Long roomMovieId) {
+    public List<SeatScheduleDto> findByRoomMovieAndSeatsId(Long movieId, Long roomMovieId) {
 
         return mapper.toDtos(rep.findByRoomMovieAndSeatsId(roomMovieId));
     }

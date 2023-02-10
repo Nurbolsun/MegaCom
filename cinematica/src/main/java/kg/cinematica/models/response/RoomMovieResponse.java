@@ -12,9 +12,9 @@ import java.time.LocalTime;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class RoomMovieResponse {
     Long id;
-    Double childPrice;
-    Double studentPrice;
-    Double adultPrice;
+    int childPrice;
+    int studentPrice;
+    int adultPrice;
     LocalTime startTime;
 
 }

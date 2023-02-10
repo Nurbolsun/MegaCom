@@ -38,10 +38,11 @@ public class CinemaController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод всех кинотеатр")
+    @ApiOperation("Вывод всех кинотеатров")
     ResponseEntity<List<CinemaDto>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }
+
     @DeleteMapping("/delete")
     @ApiOperation("Удаление")
     ResponseEntity<?> delete(@RequestParam Long id){

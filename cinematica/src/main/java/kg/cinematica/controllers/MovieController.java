@@ -39,7 +39,7 @@ public class MovieController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод все филмы")
+    @ApiOperation("Вывод все филмов")
     ResponseEntity<List<MovieDto>> findAll(){
         return ResponseEntity.ok(service.findAll());
     }
@@ -54,6 +54,7 @@ public class MovieController {
         }
     }
     @GetMapping("/findAllByActiveIsTrue")
+    @ApiOperation("LIMIT and OFFSET")
     ResponseEntity<List<MovieDto>> findAllByActiveIsTrue(@RequestParam int limit, int offset){
         return ResponseEntity.ok(service.findAllActiveWithLimitOffset(limit, offset));
     }

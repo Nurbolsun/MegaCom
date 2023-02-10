@@ -4,8 +4,8 @@ import kg.cinematica.dao.SeatRep;
 import kg.cinematica.mappers.SeatMapper;
 import kg.cinematica.models.dto.RoomDto;
 import kg.cinematica.models.dto.SeatDto;
-import kg.cinematica.models.entities.Seat;
 import kg.cinematica.models.requests.SeatRequest;
+import kg.cinematica.models.response.Response;
 import kg.cinematica.service.RoomService;
 import kg.cinematica.service.SeatService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,15 +45,20 @@ public class SeatServiceImpl implements SeatService {
 
 
     @Override
-    public SeatDto create(SeatRequest seatRequest) {
+    public Response create(SeatRequest seatRequest) {
         RoomDto roomDto = roomService.findById(seatRequest.getRoomId());
-
         SeatDto seatDto = new SeatDto();
-        seatDto.setNum(seatRequest.getNum());
-        seatDto.setRow(seatRequest.getRow());
-        seatDto.setRoom(roomDto);
-
-        return save(seatDto);
+        int row = seatRequest.getRow();
+        int num = seatRequest.getNum();
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <=num ; j++) {
+                seatDto.setRow(i);
+                seatDto.setNum(j);
+                seatDto.setRoom(roomDto);
+                save(seatDto);
+            }
+        }
+        return new Response("Сохранено успешно!");
     }
 
     @Override

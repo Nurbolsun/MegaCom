@@ -20,10 +20,10 @@ public class RoomMoviePriceController {
     private RoomMoviePriceService service;
 
     @PostMapping("/save")
-    @ApiOperation(("Сохранение фильма"))
-    ResponseEntity<?> save (@ModelAttribute RoomMoviePriceRequest movieRequest){
+    @ApiOperation(("Сохранение"))
+    ResponseEntity<?> save (@RequestParam Long roomMovieId, @RequestParam List<Long> priceId){
         try {
-            return new ResponseEntity<>(service.create(movieRequest), HttpStatus.CREATED);
+            return new ResponseEntity<>(service.create(roomMovieId, priceId), HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
         }
@@ -38,7 +38,7 @@ public class RoomMoviePriceController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод все филмы")
+    @ApiOperation("Вывод всех")
     ResponseEntity<List<RoomMoviePriceDto>> findAll(){
         return ResponseEntity.ok(service.findAll());
     }

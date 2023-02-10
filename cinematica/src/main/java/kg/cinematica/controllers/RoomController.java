@@ -29,7 +29,7 @@ public class RoomController {
         }
     }
     @GetMapping("/findById")
-    @ApiOperation("Поиск по id")
+    @ApiOperation("Поиск по id зала")
     ResponseEntity<?> findById(@RequestParam Long id){
         try {
             return new ResponseEntity<>(service.findById(id), HttpStatus.FOUND);

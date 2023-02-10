@@ -32,7 +32,7 @@ public class SeatScheduleController {
         }
     }
     @GetMapping("/findById")
-    @ApiOperation("Поиск место по id")
+    @ApiOperation("Поиск место/график по id")
     ResponseEntity<?> findById(@RequestParam Long id) {
         try {
             return new ResponseEntity<>(service.findById(id), HttpStatus.FOUND);
@@ -41,7 +41,7 @@ public class SeatScheduleController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод всех заявок")
+    @ApiOperation("Вывод всех")
     ResponseEntity<List<SeatScheduleDto>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }
@@ -56,7 +56,7 @@ public class SeatScheduleController {
         }
     }
     @GetMapping("/getByRoomMovieId")
-    @ApiOperation("Поиск по id сеанса")
+    @ApiOperation("Поиск свободные месты по id сеанса")
     ResponseEntity<List<SeatScheduleResponse>> getByRoomMovieId(@RequestParam Long roomMovieId){
         return ResponseEntity.ok(service.getRoomMovieId(roomMovieId));
     }

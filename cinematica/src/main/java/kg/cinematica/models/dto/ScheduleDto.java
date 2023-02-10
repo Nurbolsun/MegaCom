@@ -1,6 +1,7 @@
 package kg.cinematica.models.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,11 @@ public class ScheduleDto {
     LocalDate startDate;
     LocalTime startTime;
 
+    @JsonIgnore
+    Date addDate;
+    @JsonIgnore
     Date updateDate;
+    @JsonIgnore
     boolean active;
 
     public ScheduleDto(LocalDate startDate, LocalTime startTime) {

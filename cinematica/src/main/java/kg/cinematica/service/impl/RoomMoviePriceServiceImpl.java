@@ -72,7 +72,6 @@ public class RoomMoviePriceServiceImpl implements RoomMoviePriceService {
     @Override
     public GetRoomMovieResponse getRoomMovieByMovieId(Long movieId, LocalDate startDate) {
         List<RoomMoviePriceDto> roomMoviePriceDtoList = findPriceByMovieId(movieId, startDate);
-        Collections.sort(roomMoviePriceDtoList);
         List<RoomMovieDto> roomMovieDtos = roomMovieService.findRoomMovieByMovieId(movieId, startDate);
         List<RoomResponse> roomResponses = new ArrayList<>();
         for (RoomMovieDto roomMovieItem : roomMovieDtos){

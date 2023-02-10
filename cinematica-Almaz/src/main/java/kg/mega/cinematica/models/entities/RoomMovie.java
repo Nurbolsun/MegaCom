@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -23,6 +24,7 @@ public class RoomMovie extends WorkDate{
     Movie movie;
     @ManyToOne
     Schedule schedule;
+
 
 
 

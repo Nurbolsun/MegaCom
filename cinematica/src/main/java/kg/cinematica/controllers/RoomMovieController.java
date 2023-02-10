@@ -38,7 +38,7 @@ public class RoomMovieController {
         }
     }
     @GetMapping("/findAll")
-    @ApiOperation("Вывод все филмы")
+    @ApiOperation("Вывод всех сеансов")
     ResponseEntity<List<RoomMovieDto>> findAll(){
         return ResponseEntity.ok(service.findAll());
     }

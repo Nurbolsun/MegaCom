@@ -5,7 +5,6 @@ import kg.mega.cinematica.exceptions.RoomNotFoundException;
 import kg.mega.cinematica.mappers.RoomMapper;
 import kg.mega.cinematica.models.dto.CinemaDto;
 import kg.mega.cinematica.models.dto.RoomDto;
-import kg.mega.cinematica.models.dto.RoomMovieDto;
 import kg.mega.cinematica.models.request.SaveRoomRequest;
 import kg.mega.cinematica.service.CinemaService;
 import kg.mega.cinematica.service.RoomService;
@@ -19,6 +18,7 @@ public class RoomServiceImpl implements RoomService {
     RoomMapper mapper = RoomMapper.INSTANCE;
     private final RoomRep rep;
     private final CinemaService cinemaService;
+
 
     @Autowired
     public RoomServiceImpl(RoomRep rep, CinemaService cinemaService) {

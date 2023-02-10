@@ -1,6 +1,7 @@
 package kg.cinematica.service.impl;
 
 import kg.cinematica.dao.PriceRep;
+import kg.cinematica.enums.Type;
 import kg.cinematica.mappers.PriceMapper;
 import kg.cinematica.models.dto.PriceDto;
 import kg.cinematica.models.requests.PriceRequest;
@@ -24,7 +25,7 @@ public class PriceServiceImpl implements PriceService {
 
     @Override
     public PriceDto findById(Long id) {
-        return mapper.toDto(rep.findById(id).orElseThrow(() -> new RuntimeException("не найден!")));
+        return mapper.toDto(rep.findById(id).orElseThrow(() -> new RuntimeException("Не найден!")));
     }
 
     @Override
@@ -46,5 +47,19 @@ public class PriceServiceImpl implements PriceService {
         priceDto.setPrice(priceRequest.getPrice());
         priceDto.setType(priceRequest.getType());
         return save(priceDto);
+    }
+
+    @Override
+    public int getPrice(Type priceType) {
+        List<PriceDto> priceDtos = findPrice(priceType);
+        if (priceDtos==null)
+            return 0;
+        return priceDtos.get(0).getPrice();
+    }
+
+    @Override
+    public List<PriceDto> findPrice(Type priceType) {
+        List<PriceDto> list = mapper.toDtos(rep.findPrice(priceType));
+        return list;
     }
 }
